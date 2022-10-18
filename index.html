@@ -59,7 +59,39 @@
     </div>
 
     <div></div>
-
-    <script src="welcome.js"></script>
+    <!--html for benchmark quiz-->
+    <div class="mainContainer">
+      <div class="header">
+        <div id="logo">Epicode Logo</div>
+        <div id="countdownContainer" class="center">
+          <div class="circle-container center">
+            <div class="semicircle"></div>
+            <div class="semicircle"></div>
+            <div class="semicircle"></div>
+            <div class="outermost-circle"></div>
+          </div>
+          <div class="timer-container center">
+            <div class="timer center">
+              <div>SECONDS</div>
+              <div id="secondsRemaining"></div>
+              <div>REMAINING</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="benchmarkContainer">
+        <div id="question">Insert Question Here</div>
+        <div id="answer-buttons" class="btn-grid"></div>
+      </div>
+      <div class="benchmarkNavigation">
+        <button id="next-button" class="next-button btn hidden">Next</button>
+        <button id="finish-button" class="next-button btn hidden">
+          Finish
+        </button>
+      </div>
+      <div id="questionNumber"></div>
+    </div>
+    
+    <script src="./script.js"></script>
   </body>
 </html>
