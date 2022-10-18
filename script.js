@@ -1,3 +1,37 @@
+// function to move to benchmark quiz from welcome page
+const welcomePage = document.querySelector(".welcome-page")
+const benchmarkPage = document.querySelector(".benchmark-page")
+
+function showWelcomePage() {
+  welcomePage.classList.remove("hidden")
+  benchmarkPage.classList.add("hidden")
+}
+
+showWelcomePage()
+
+function hideWelcomePage() {
+  welcomePage.classList.add("hidden")
+  benchmarkPage.classList.remove("hidden")
+}
+
+function proceed() {
+  let checkbox = document.getElementById("checkbox")
+  let proceed = document.getElementById("button")
+  proceed.addEventListener("click", function () {
+    if (checkbox.checked === false) {
+      alert("You have to promise first!")
+    } else if (checkbox.checked === true) {
+      hideWelcomePage()
+    }
+  })
+}
+
+window.onload = function () {
+  proceed()
+}
+
+// javascript for the benchmark quiz
+
 const questions = [
   {
     question: "How can I create a checkbox in HTML?",
