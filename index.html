@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Benchmark Quiz</title>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="header">
+        <div id="logo">Epicode Logo</div>
+        <div id="countdownContainer" class="center">
+          <div class="circle-container center">
+            <div class="semicircle"></div>
+            <div class="semicircle"></div>
+            <div class="semicircle"></div>
+            <div class="outermost-circle"></div>
+          </div>
+          <div class="timer-container center">
+            <div class="timer center">
+              <div>SECONDS</div>
+              <div id="secondsRemaining"></div>
+              <div>REMAINING</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="benchmarkContainer">
+        <div id="question">Insert Question Here</div>
+        <div id="answer-buttons" class="btn-grid"></div>
+      </div>
+      <div class="benchmarkNavigation">
+        <button id="next-button" class="next-button btn hidden">Next</button>
+        <button id="finish-button" class="next-button btn hidden">
+          Finish
+        </button>
+      </div>
+      <div id="questionNumber"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
