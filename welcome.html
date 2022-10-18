@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Outfit:wght@200;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="welcome.css" />
+    <title>Welcome page</title>
+  </head>
+
+  <body>
+    <div class="bg"></div>
+
+    <div class="logo">
+      <img src="./assets/epicode_logo.png" height="60px" width="210px" />
+    </div>
+
+    <div class="heading1">
+      <h1>Welcome to</h1>
+    </div>
+
+    <div class="heading2">
+      <h2>your exam</h2>
+    </div>
+
+    <div class="instructions">
+      <h3>Instructions</h3>
+      <p>
+        We don't expect most engineers to know the answers to all of these<br />questions,
+        so don't worry if you're unsure of a few of them.
+      </p>
+      <ul>
+        <li>
+          Each question is <span>timed</span> and can be
+          <span>answered once</span>.
+        </li>
+      </br>
+        <li>
+          Changing browser tab or opening other windows will
+          <span>invalidate the question</span>.
+        </li>
+      </br>
+        <li>This exam will take approx. <span>0-5 minutes</span>.</li>
+      </ul>
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="checkbox" class="check-box" />
+      <label for="checkbox"
+        >I promise to answer myself without help from anyone</label
+      >
+    </div>
+
+    <div class="button">
+      <input type="button" value="PROCEED" id="button" class="proceed" />
+    </div>
+
+    <script src="welcome.js"></script>
+  </body>
+</html>
