@@ -264,12 +264,16 @@ function countDownTimer() {
 
 function stopTimer() {}
 
+// show review page
+let showReview = document.querySelector(".review-page")
+
 finishButton.addEventListener("click", finishBenchmark)
 // makes finish button appear
 function finishBenchmark() {
   questionContainer.classList.add("hidden")
   questionNumberElement.classList.add("hidden")
   finishButton.classList.add("hidden")
+  showReview.classList.remove("hidden")
 }
 
 // functionality for review page

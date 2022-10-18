@@ -1,10 +1,11 @@
-  /* benchmark page basic css */
+/* benchmark page basic css */
 .header {
   display: flex;
   justify-content: space-between;
 }
+
 #question {
-  color: blue;
+  color: white;
 }
 
 .btn {
@@ -36,7 +37,6 @@
 #countdownContainer {
   height: 300px;
   width: 300px;
-  background-color: purple;
 }
 
 .circle-container {
@@ -100,77 +100,79 @@
   font-size: 50px;
 }
 
-  /* review page css*/
+/* review page css*/
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-body{
-    display:flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
-.container{
-    display: flex;
-    position:relative;
-    align-items: center;
-    justify-content: center;
-    
-    width: 600px;
-    height: 100px;
-    padding: 200px;
-    padding: 200px 0;
-    opacity:0.6;
-    transition: 0.3s;
+.container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 100px;
+  padding: 200px;
+  padding: 200px 0;
+  opacity: 0.6;
+  transition: 0.3s;
 }
-h1{
-    font-family: sans-serif;
-    font-size: 40px;
-    position: absolute;
-    top: 30px
+h1 {
+  font-family: sans-serif;
+  font-size: 40px;
+  position: absolute;
+  top: 30px;
 }
-p{
-    position: absolute;
-    top: 90px
+p {
+  position: absolute;
+  top: 90px;
+}
+#para {
+  font-family: sans-serif;
+  position: absolute;
+  bottom: 50px;
+}
+ol {
+  display: flex;
+  list-style: none;
+  position: absolute;
+  padding: 50px o;
+}
+ol li {
+  margin: 0 15px;
+}
+li a {
+  font-size: 25px;
+  color: #561e6e;
+}
+.review-page {
+  color: white;
+}
 
+#myBtn {
+  border: none;
+  padding: 10px 50px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  bottom: 20%;
+  left: 40%;
 }
-#para{
-    font-family: sans-serif;
-    position: absolute;
-    bottom: 50px;
+#paragraph {
+  position: absolute;
+  top: 230px;
 }
-ol{
-    display: flex;
-    list-style: none;
-    position: absolute;
-    padding: 50px o;
-}
-ol li{
-    margin: 0 15px;
-}
-li a{
-    font-size: 25px;
-    color:#561E6E
-}
-#myBtn{
-    border: none;
-    padding: 10px 50px;
-    cursor: pointer;
-    position: absolute;
-    z-index: 1;
-    bottom:20%;
-    left:40%;
-}
-#paragraph{
-    position: absolute;
-    top: 230px;
-}
-#textarea{
-    position: absolute;
-    top: 270px; 
+#textarea {
+  position: absolute;
+  top: 270px;
 }
