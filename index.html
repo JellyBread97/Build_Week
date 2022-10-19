@@ -63,22 +63,7 @@
     <div class="benchmark-page">
     <!--html for benchmark quiz-->
     <div class="mainContainer">
-      <div class="header">
-        <div id="countdownContainer" class="center">
-          <div class="circle-container center">
-            <div class="semicircle"></div>
-            <div class="semicircle"></div>
-            <div class="semicircle"></div>
-            <div class="outermost-circle"></div>
-          </div>
-          <div class="timer-container center">
-            <div class="timer center">
-              <div>SECONDS</div>
-              <div id="secondsRemaining"></div>
-              <div>REMAINING</div>
-            </div>
-          </div>
-        </div>
+      <div class="header"></div>
       </div>
       <div id="benchmarkContainer">
         <div id="question">Insert Question Here</div>
@@ -86,12 +71,16 @@
       </div>
       <div class="benchmarkNavigation">
         <button id="next-button" class="next-button btn hidden">Next</button>
-        <button id="finish-button" class="next-button btn hidden">
+        <button onclick="finishBenchmark()" id="finish-button" class="next-button btn hidden">
           Finish
         </button>
       </div>
       <div id="questionNumber"></div>
     </div>
+  </div>
+
+  <div class="results-page hidden">
+    <div>results</div>
   </div>
 
 <div class="review-page hidden">

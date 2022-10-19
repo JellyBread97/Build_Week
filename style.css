@@ -1,5 +1,4 @@
 /*welcome page css*/
-
 body,
 html {
   height: 100%;
@@ -122,6 +121,7 @@ input.check-box {
   width: 100%;
   top: 30%;
 }
+
 #question {
   position: relative;
   color: #e7e7eb;
@@ -175,6 +175,7 @@ input.check-box {
   align-items: center;
 }
 
+/*
 #countdownContainer {
   position: absolute;
   top: 0;
@@ -195,46 +196,58 @@ input.check-box {
   z-index: 6;
   box-shadow: 0 0 4vh black;
 }
+*/
 
-.semicircle {
-  width: 50%;
-  height: 100%;
+.base-timer__svg {
+  transform: scaleX(1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: white;
+  opacity: 20%;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.purple {
+  color: #c2128d;
+}
+
+.base-timer__path-remaining.turquoise {
+  color: #41ffff;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
   position: absolute;
+  width: 200px;
+  height: 200px;
   top: 0;
-  left: 0;
-  transform-origin: right center;
-}
-
-.semicircle:nth-child(1) {
-  background-color: #00ffff;
-  z-index: 1;
-}
-.semicircle:nth-child(2) {
-  background-color: #00ffff;
-  z-index: 2;
-}
-.semicircle:nth-child(3) {
-  z-index: 4;
-  display: none;
-}
-
-.outermost-circle {
-  width: 170px;
-  height: 170px;
-  background-color: white;
-  border-radius: 50%;
-  z-index: 5;
-}
-
-.timer-container {
-  width: 150px;
-  height: 150px;
-  z-index: 6;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
   color: white;
 }
 
+/*
 .timer {
   width: 300px;
   height: 75px;
@@ -244,7 +257,9 @@ input.check-box {
 }
 #secondsRemaining {
   font-size: 50px;
-}
+} 
+*/
+
 #questionNumber {
   position: absolute;
   font-family: "Outfit", sans-serif;
