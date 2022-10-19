@@ -105,7 +105,7 @@ const answerButton = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-button")
 const finishButton = document.querySelector("#finish-button")
 
-let randomQuestion, currentQuestionIndex
+let randomQuestion, currentQuestionIndex, selectedButton
 
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++
@@ -159,7 +159,20 @@ function selectAnswer(e) {
     finishButton.classList.remove("hidden") // shows the finish button when we run out of questions
     nextButton.classList.add("hidden")
   }
+  function userScore(e) {
+    if (selectedButton === correct) {
+      console.log("correct")
+      scoreCounter++
+    }
+    console.log(scoreCounter)
+  }
+  userScore()
 }
+
+// collect all the answer containers from the quiz
+
+// function to collect user score
+
 // changes colour based on whether answer is correct or wrong
 function setStatusClass(element, correct) {
   clearStatusClass(element)
@@ -245,6 +258,8 @@ function onTimesUp() {
   clearInterval(timerInterval)
 }
 
+function nextQuestionTimerFinished() {}
+
 function startTimer() {
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1
@@ -306,7 +321,7 @@ function setCircleDasharray() {
 // function timeIsUp() {
 //   if (timeLeft === alert.threshold)
 // }
-
+// onTimesUp()
 function stopTimer() {}
 
 // show review page
