@@ -116,6 +116,12 @@ input.check-box {
   justify-content: space-between;
 }
 
+#benchmarkContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 30%;
+}
 #question {
   position: relative;
   color: #e7e7eb;
@@ -126,19 +132,19 @@ input.check-box {
 }
 
 .btn {
-  color: #c2128d;
   font-family: "Inter", sans-serif;
   font-size: 2vh;
   font-weight: 400;
   font-weight: bold;
   padding: 10%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 12%;
+  margin-right: 12%;
   margin-top: 2%;
   margin-bottom: 2%;
   border-radius: 20px;
   cursor: pointer;
-  border: white;
+  width: 80%;
+  background-color: rgba(11, 17, 59, 0.6);
 }
 
 .btn-grid {
@@ -147,11 +153,16 @@ input.check-box {
 }
 
 .correct {
-  color: rgb(15, 83, 15);
+  color: #e7e7eb;
+  background: linear-gradient(
+    180deg,
+    rgba(194, 18, 141, 0.6),
+    rgba(127, 28, 225, 0.6)
+  );
 }
 
 .wrong {
-  color: rgb(194, 16, 16);
+  color: #e7e7eb;
 }
 
 .hidden {
@@ -257,6 +268,7 @@ input.check-box {
   cursor: pointer;
   border-radius: 0;
   opacity: 80%;
+  width: 20%;
 }
 #finish-button {
   position: absolute;
