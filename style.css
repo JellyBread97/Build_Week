@@ -217,6 +217,12 @@ input.check-box {
   color: white;
 }
 
+/* results page css*/
+
+.results-page {
+  color: white;
+}
+
 /* review page css*/
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
