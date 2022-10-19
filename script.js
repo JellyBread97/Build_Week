@@ -182,7 +182,8 @@ function processResults(isCorrect) {
     return
   }
   const scoreUp = parseInt(scoreUpElement.textContent, 0)
-  scoreUpElement.textContent = scoreUp + 1 + " / " + questions.length
+  scoreUpElement.textContent =
+    scoreUp + 1 + " / " + questions.length + " questions "
 }
 
 // changes colour based on whether answer is correct or wrong
@@ -362,7 +363,8 @@ finishButton.onclick = function () {
 
   let wrongScore = questions.length - parseInt(scoreUpElement.textContent, 0)
 
-  wrongScoreElement.innerHTML = wrongScore + " / " + questions.length
+  wrongScoreElement.innerHTML =
+    wrongScore + " / " + questions.length + " questions "
 }
 // let finishBenchmark = function () {
 // questionContainer.classList.add("hidden")
