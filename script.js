@@ -109,6 +109,8 @@ const scores = document.getElementById("scores")
 const scoreUpElement = document.getElementById("score-up")
 const scoreUp = parseInt(scoreUpElement.textContent, 0)
 const percentageDiv = document.getElementById("percentage-score")
+const percentageWrongElement = document.getElementById("wrong-percentage-score")
+const wrongScoreElement = document.getElementById("wrong-score")
 
 let randomQuestion, currentQuestionIndex, selectedButton
 
@@ -349,8 +351,18 @@ finishButton.onclick = function () {
   console.log("finished")
   benchmarkPage.classList.add("hidden")
   showResults.classList.remove("hidden")
-  percentageDiv.innerHTML =
-    (parseInt(scoreUpElement.textContent, 0) / questions.length) * 100
+
+  let finalPercentageCorrect =
+    (parseInt(scoreUpElement.textContent, 0) / questions.length).toFixed(4) *
+    100
+  percentageDiv.innerHTML = finalPercentageCorrect + "%"
+
+  let finalPercentageWrong = 100 - finalPercentageCorrect
+  percentageWrongElement.innerHTML = finalPercentageWrong + "%"
+
+  let wrongScore = questions.length - parseInt(scoreUpElement.textContent, 0)
+
+  wrongScoreElement.innerHTML = wrongScore + " / " + questions.length
 }
 // let finishBenchmark = function () {
 // questionContainer.classList.add("hidden")
