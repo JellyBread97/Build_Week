@@ -1,4 +1,4 @@
-// function to move to benchmark quiz from welcome page
+// function to move to benchmark quiz from welcome
 //comment
 const welcomePage = document.querySelector(".welcome-page")
 const benchmarkPage = document.querySelector(".benchmark-page")
@@ -103,7 +103,7 @@ const questionElement = document.getElementById("question")
 const questionNumberElement = document.getElementById("questionNumber")
 const answerButton = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-button")
-const finishButton = document.getElementById("finish-button")
+const finishButton = document.querySelector("#finish-button")
 
 let randomQuestion, currentQuestionIndex
 
@@ -191,6 +191,7 @@ startBenchmark()
 const FULL_DASH_ARRAY = 283
 const WARNING_THRESHOLD = 10
 const ALERT_THRESHOLD = 5
+const TIME_UP = 0
 
 const COLOR_CODES = {
   info: {
@@ -302,19 +303,32 @@ function setCircleDasharray() {
     .setAttribute("stroke-dasharray", circleDasharray)
 }
 
+// function timeIsUp() {
+//   if (timeLeft === alert.threshold)
+// }
+
 function stopTimer() {}
 
 // show review page
-let showReview = document.querySelector(".review-page")
+const showReview = document.querySelector(".review-page")
+const showResults = document.querySelector(".results-page")
+const timerElement = document.querySelector(".timer-container")
 
-finishButton.addEventListener("click", finishBenchmark)
+// finishButton.addEventListener("click", finishBenchmark)
 // makes finish button appear
-function finishBenchmark() {
-  questionContainer.classList.add("hidden")
-  questionNumberElement.classList.add("hidden")
-  finishButton.classList.add("hidden")
-  showReview.classList.remove("hidden")
+// function to make results page show
+
+finishButton.onclick = function () {
+  console.log("finished")
+  benchmarkPage.classList.add("hidden")
+  showResults.classList.remove("hidden")
 }
+// let finishBenchmark = function () {
+// questionContainer.classList.add("hidden")
+// questionNumberElement.classList.add("hidden")
+// }
+
+// results page
 
 // functionality for review page
 
