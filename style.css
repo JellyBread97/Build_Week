@@ -6,10 +6,10 @@ html {
   position: relative;
   user-select: none;
   margin: 0;
+  background-image: url(/assets/bg.jpg);
 }
 
 .bg {
-  background-image: url(/assets/bg.jpg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -120,6 +120,10 @@ input.check-box {
   justify-content: space-between;
 }
 
+#benchmarkContainer {
+  margin-top: 200px;
+}
+
 #question {
   color: white;
 }
@@ -150,70 +154,68 @@ input.check-box {
   align-items: center;
 }
 
-#countdownContainer {
-  height: 300px;
-  width: 300px;
-}
-
-.circle-container {
-  background-color: white;
-  opacity: 0.5;
-  /* border: 10px solid pink; */
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  position: absolute;
-  overflow: hidden;
-  z-index: 6;
-}
-
-.semicircle {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: right center;
-}
-
-.semicircle:nth-child(1) {
-  background-color: #00ffff;
-  z-index: 1;
-}
-.semicircle:nth-child(2) {
-  background-color: #00ffff;
-  z-index: 2;
-}
-.semicircle:nth-child(3) {
-  z-index: 4;
-  display: none;
-}
-
-.outermost-circle {
-  width: 170px;
-  height: 170px;
-  background-color: white;
-  border-radius: 50%;
-  z-index: 5;
-}
+/* timer css*/
 
 .timer-container {
-  width: 150px;
-  height: 150px;
-  z-index: 6;
-  display: flex;
-  flex-direction: column;
-  color: white;
+  font-family: sans-serif;
+  display: grid;
+  height: 10vh;
+  place-items: center;
 }
 
-.timer {
-  width: 300px;
-  height: 75px;
-  z-index: 7;
-  flex-direction: column;
+.base-timer {
+  position: relative;
+  width: 200px;
+  height: 200px;
 }
-#secondsRemaining {
-  font-size: 50px;
+
+.base-timer__svg {
+  transform: scaleX(1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: white;
+  opacity: 20%;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.purple {
+  color: #c2128d;
+}
+
+.base-timer__path-remaining.turquoise {
+  color: #41ffff;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: white;
 }
 
 /* review page css*/
