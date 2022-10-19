@@ -16,6 +16,7 @@ function hideWelcomePage() {
 }
 
 function proceed() {
+  scoreUpElement.textContent = 0
   let checkbox = document.getElementById("checkbox")
   let proceed = document.getElementById("button")
   proceed.addEventListener("click", function () {
@@ -107,9 +108,9 @@ const finishButton = document.querySelector("#finish-button")
 const scores = document.getElementById("scores")
 const scoreUpElement = document.getElementById("score-up")
 const scoreUp = parseInt(scoreUpElement.textContent, 0)
+const percentageDiv = document.getElementById("percentage-score")
 
 let randomQuestion, currentQuestionIndex, selectedButton
-let scoreCounter = 0
 
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++
@@ -156,7 +157,7 @@ function selectAnswer(e) {
   const userAnswer = selectedButton.value
   const correct = selectedButton.dataset.correct
   processResults(correct)
-  console.log(processResults(correct))
+  // console.log(processResults(correct))
   // console.log(selectedButton)
   const answerOptions = answerButton.children
   const answerOptionsArray = Array.from(answerOptions).forEach((button) => {
@@ -348,6 +349,8 @@ finishButton.onclick = function () {
   console.log("finished")
   benchmarkPage.classList.add("hidden")
   showResults.classList.remove("hidden")
+  percentageDiv.innerHTML =
+    (parseInt(scoreUpElement.textContent, 0) / questions.length) * 100
 }
 // let finishBenchmark = function () {
 // questionContainer.classList.add("hidden")
