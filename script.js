@@ -104,8 +104,12 @@ const questionNumberElement = document.getElementById("questionNumber")
 const answerButton = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-button")
 const finishButton = document.querySelector("#finish-button")
+const scores = document.getElementById("scores")
+const scoreUpElement = document.getElementById("score-up")
+const scoreUp = parseInt(scoreUpElement.textContent, 0)
 
 let randomQuestion, currentQuestionIndex, selectedButton
+let scoreCounter = 0
 
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++
@@ -116,6 +120,7 @@ nextButton.addEventListener("click", () => {
 function startBenchmark() {
   randomQuestion = questions.sort(() => Math.random() - 0.5)
   currentQuestionIndex = 0
+  scoreUpElement.textContent = 0 // score starts from zero
   setNextQuestion()
 }
 
@@ -148,30 +153,34 @@ function resetState() {
 
 function selectAnswer(e) {
   const selectedButton = e.target
+  const userAnswer = selectedButton.value
   const correct = selectedButton.dataset.correct
-  Array.from(answerButton.children).forEach((button) => {
+  processResults(correct)
+  console.log(processResults(correct))
+  // console.log(selectedButton)
+  const answerOptions = answerButton.children
+  const answerOptionsArray = Array.from(answerOptions).forEach((button) => {
     // checks if the answer is correct or wrond
     setStatusClass(button, button.dataset.correct)
   })
   if (randomQuestion.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("hidden")
   } else {
+    const scoreUp = parseInt(scoreUpElement.textContent, 0)
     finishButton.classList.remove("hidden") // shows the finish button when we run out of questions
     nextButton.classList.add("hidden")
   }
-  function userScore(e) {
-    if (selectedButton === correct) {
-      console.log("correct")
-      scoreCounter++
-    }
-    console.log(scoreCounter)
-  }
-  userScore()
+
+  console.log(answerOptionsArray)
 }
 
-// collect all the answer containers from the quiz
-
-// function to collect user score
+function processResults(isCorrect) {
+  if (!isCorrect) {
+    return
+  }
+  const scoreUp = parseInt(scoreUpElement.textContent, 0)
+  scoreUpElement.textContent = scoreUp + 1 + " / " + questions.length
+}
 
 // changes colour based on whether answer is correct or wrong
 function setStatusClass(element, correct) {
@@ -198,6 +207,8 @@ function hideNextButton() {
 }
 
 startBenchmark()
+
+// calculate result
 
 // code for timer
 
