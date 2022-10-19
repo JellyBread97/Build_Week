@@ -304,13 +304,15 @@ input.check-box {
 #h2-review {
   position: absolute;
   font-family: "Outfit", sans-serif;
-  font-size: 8vh;
+  font-size: 6vh;
   color: #e7e7eb;
 }
 #p-review {
   position: absolute;
-  top: 20vh;
+  top: 2vh;
   font-family: "Inter", sans-serif;
+  font-size: 2.5vh;
+  text-align: center;
 }
 #p-bottom-one {
   position: absolute;
@@ -357,5 +359,13 @@ li a {
 }
 #textarea {
   position: absolute;
-  top: 270px;
+  top: 32vh;
+  background: transparent;
+  border: transparent;
+  font-size: 2vh;
+}
+hr {
+  display: block;
+  height: 1px;
+  border-top: 1px solid #c2128d;
 }
