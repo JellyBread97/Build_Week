@@ -6,16 +6,10 @@ html {
   position: relative;
   user-select: none;
   margin: 0;
-}
-
-.bg {
   background-image: url(/assets/bg.jpg);
-  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0;
-  margin: 0;
 }
 
 .logo {
@@ -26,27 +20,27 @@ html {
 
 .heading1 {
   position: absolute;
-  top: 10%;
+  top: 14%;
   left: 14%;
   color: #e7e7eb;
   font-family: "Outfit", sans-serif;
   font-weight: 200;
-  font-size: 3vh;
+  font-size: 10vh;
 }
 
 .heading2 {
   position: absolute;
-  top: 12%;
+  top: 22%;
   left: 14%;
   color: #e7e7eb;
   font-family: "Outfit", sans-serif;
   font-weight: 900;
-  font-size: 5vh;
+  font-size: 10vh;
 }
 
 .instructions h3 {
   position: absolute;
-  top: 34%;
+  top: 42%;
   left: 14%;
   font-family: "Inter", sans-serif;
   font-size: 3vh;
@@ -55,16 +49,17 @@ html {
 
 .instructions p {
   position: absolute;
-  top: 40%;
+  top: 48%;
   left: 14%;
   font-size: 1.8vh;
   font-family: "Inter", sans-serif;
   color: #e7e7eb;
+  margin-right: 10vw;
 }
 
 .instructions ul {
   position: absolute;
-  top: 48%;
+  top: 56%;
   left: 14%;
   font-size: 1.8vh;
   font-family: "Inter", sans-serif;
@@ -84,6 +79,7 @@ span {
   font-size: 1.8vh;
   font-family: "Inter", sans-serif;
   margin-right: 32vw;
+  margin-left: 2vw;
 }
 
 input.check-box {
@@ -121,11 +117,28 @@ input.check-box {
 }
 
 #question {
-  color: white;
+  position: relative;
+  color: #e7e7eb;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 5vh;
+  text-align: center;
 }
 
 .btn {
-  color: purple;
+  color: #c2128d;
+  font-family: "Inter", sans-serif;
+  font-size: 2vh;
+  font-weight: 400;
+  font-weight: bold;
+  padding: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 20px;
+  cursor: pointer;
+  border: white;
 }
 
 .btn-grid {
@@ -134,11 +147,11 @@ input.check-box {
 }
 
 .correct {
-  color: green;
+  color: rgb(15, 83, 15);
 }
 
 .wrong {
-  color: red;
+  color: rgb(194, 16, 16);
 }
 
 .hidden {
@@ -151,12 +164,15 @@ input.check-box {
 }
 
 #countdownContainer {
+  position: absolute;
+  top: 0;
+  right: 4%;
   height: 300px;
   width: 300px;
 }
 
 .circle-container {
-  background-color: white;
+  background-color: #e7e7eb;
   opacity: 0.5;
   /* border: 10px solid pink; */
   width: 200px;
@@ -165,6 +181,7 @@ input.check-box {
   position: absolute;
   overflow: hidden;
   z-index: 6;
+  box-shadow: 0 0 4vh black;
 }
 
 .semicircle {
@@ -211,58 +228,87 @@ input.check-box {
   height: 75px;
   z-index: 7;
   flex-direction: column;
+  font-family: "Outfit", sans-serif;
 }
 #secondsRemaining {
   font-size: 50px;
 }
+#questionNumber {
+  position: absolute;
+  font-family: "Outfit", sans-serif;
+  color: #e7e7eb;
+  bottom: 3%;
+  right: 45%;
+  font-size: 3vh;
+}
+#next-button {
+  position: absolute;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  background-color: #51adc6;
+  text-align: center;
+  font-size: 3vh;
+  padding: 2% 5%;
+  bottom: 0;
+  right: 0;
+  border-color: #51adc6;
+  color: #0b113b;
+  background: #51adc6;
+  cursor: pointer;
+  border-radius: 0;
+  opacity: 80%;
+}
+#finish-button {
+  position: absolute;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  background-color: #51adc6;
+  text-align: center;
+  font-size: 3vh;
+  padding: 2% 5%;
+  bottom: 0;
+  right: 0;
+  border-color: #51adc6;
+  color: #0b113b;
+  background: #51adc6;
+  cursor: pointer;
+  border-radius: 0;
+  opacity: 80%;
+}
 
 /* review page css*/
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body {
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-}
 .container {
   display: flex;
-  position: relative;
+  position: absolute;
   align-items: center;
   justify-content: center;
-  width: 600px;
-  height: 100px;
-  padding: 200px;
-  padding: 200px 0;
-  opacity: 0.6;
+  top: 30%;
+  width: 100%;
   transition: 0.3s;
 }
-h1 {
-  font-family: sans-serif;
-  font-size: 40px;
+#h2-review {
   position: absolute;
-  top: 30px;
+  font-family: "Outfit", sans-serif;
+  font-size: 8vh;
+  color: #e7e7eb;
 }
-p {
+#p-review {
   position: absolute;
-  top: 90px;
+  top: 20vh;
+  font-family: "Inter", sans-serif;
 }
-#para {
-  font-family: sans-serif;
+#p-bottom-one {
   position: absolute;
-  bottom: 50px;
+  font-family: "Inter", sans-serif;
+  top: 20vh;
+  font-size: 3vh;
 }
 ol {
   display: flex;
   list-style: none;
   position: absolute;
-  padding: 50px o;
+  padding: 50px;
 }
 ol li {
   margin: 0 15px;
@@ -276,13 +322,20 @@ li a {
 }
 
 #myBtn {
-  border: none;
-  padding: 10px 50px;
-  cursor: pointer;
   position: absolute;
-  z-index: 1;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  background-color: #41ffff;
+  text-align: center;
+  font-size: 2.5vh;
+  padding: 2% 4%;
   bottom: 20%;
-  left: 40%;
+  left: 42%;
+  border-color: #41ffff;
+  color: #0b113b;
+  background: #41ffff;
+  box-shadow: 0 0 4vh #41ffff;
+  cursor: pointer;
 }
 #paragraph {
   position: absolute;
