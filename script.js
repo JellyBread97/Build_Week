@@ -345,6 +345,7 @@ function stopTimer() {}
 const showReview = document.querySelector(".review-page")
 const showResults = document.querySelector(".results-page")
 const timerElement = document.querySelector(".timer-container")
+const chartContainerElement = document.querySelector(".chart-container")
 
 // finishButton.addEventListener("click", finishBenchmark)
 // makes finish button appear
@@ -355,6 +356,7 @@ finishButton.onclick = function () {
   benchmarkPage.classList.add("hidden")
   showResults.classList.remove("hidden")
   reviewButton.classList.remove("hidden")
+  chartContainerElement.classList.remove("hidden")
 
   let finalPercentageCorrect =
     (parseInt(scoreUpElement.textContent, 0) / questions.length).toFixed(4) *
@@ -363,12 +365,41 @@ finishButton.onclick = function () {
 
   let finalPercentageWrong = 100 - finalPercentageCorrect
   percentageWrongElement.innerHTML = finalPercentageWrong + "%"
-
-  let wrongScore = questions.length - parseInt(scoreUpElement.textContent, 0)
+  let correctScore = parseInt(scoreUpElement.textContent, 0)
+  let wrongScore =
+    questions.length - parseInt(scoreUpElement.textContent, 0).toFixed(4)
 
   wrongScoreElement.innerHTML =
     wrongScore + " / " + questions.length + " questions "
+
+  // results chart
+  let resultsChart = document.getElementById("scoreChart").getContext("2d")
+
+  let finalResultsChart = new Chart(resultsChart, {
+    type: "doughnut",
+    data: {
+      // labels: ["wrong", "correct"],
+      datasets: [
+        {
+          label: "The summary of your answers",
+          data: [wrongScore, correctScore],
+          backgroundColor: [" #c2128d", "#41ffff"]
+        }
+      ]
+    },
+    options: {
+      cutoutPercentage: 70,
+      tooltips: { enabled: false },
+      hover: { mode: null },
+      elements: {
+        arc: {
+          borderWidth: 0 // <-- Set this to derired value
+        }
+      }
+    }
+  })
 }
+
 // let finishBenchmark = function () {
 // questionContainer.classList.add("hidden")
 // questionNumberElement.classList.add("hidden")
