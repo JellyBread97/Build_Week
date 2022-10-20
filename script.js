@@ -111,6 +111,7 @@ const scoreUp = parseInt(scoreUpElement.textContent, 0)
 const percentageDiv = document.getElementById("percentage-score")
 const percentageWrongElement = document.getElementById("wrong-percentage-score")
 const wrongScoreElement = document.getElementById("wrong-score")
+const reviewButton = document.getElementById("review-button")
 
 let randomQuestion, currentQuestionIndex, selectedButton
 
@@ -352,6 +353,7 @@ finishButton.onclick = function () {
   console.log("finished")
   benchmarkPage.classList.add("hidden")
   showResults.classList.remove("hidden")
+  reviewButton.classList.remove("hidden")
 
   let finalPercentageCorrect =
     (parseInt(scoreUpElement.textContent, 0) / questions.length).toFixed(4) *
@@ -374,6 +376,10 @@ finishButton.onclick = function () {
 // results page
 
 // functionality for review page
+
+reviewButton.onclick = function () {
+  showResults.classList.add("hidden")
+}
 
 const star1 = document.querySelector(".star1")
 const star2 = document.querySelector(".star2")
