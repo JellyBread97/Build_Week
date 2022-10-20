@@ -166,10 +166,10 @@ function selectAnswer(e) {
   // console.log(processResults(correct))
   // console.log(selectedButton)
   const answerOptions = answerButton.children
-  const answerOptionsArray = Array.from(answerOptions).forEach((button) => {
-    // checks if the answer is correct or wrond
-    setStatusClass(button, button.dataset.correct)
-  })
+  // const answerOptionsArray = Array.from(answerOptions).forEach((button) => {
+  //   checks if the answer is correct or wrong
+  //   setStatusClass(button, button.dataset.correct)
+  // })
   if (randomQuestion.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("hidden")
   } else {
@@ -191,18 +191,18 @@ function processResults(isCorrect) {
 }
 
 // changes colour based on whether answer is correct or wrong
-function setStatusClass(element, correct) {
-  clearStatusClass(element)
-  if (correct) {
-    element.classList.add("correct")
-  } else {
-    element.classList.add("wrong")
-  }
-}
-function clearStatusClass(element) {
-  element.classList.remove("wrong")
-  element.classList.remove("correct")
-}
+// function setStatusClass(element, correct) {
+//   clearStatusClass(element)
+//   if (correct) {
+//     element.classList.add("correct")
+//   } else {
+//     element.classList.add("wrong")
+//   }
+// }
+// function clearStatusClass(element) {
+//   element.classList.remove("wrong")
+//   element.classList.remove("correct")
+// }
 function changeQuestionNumber() {
   let numberOfQuestions = questions.length
   let currentQuestionNumber = currentQuestionIndex + 1
