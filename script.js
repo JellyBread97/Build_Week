@@ -426,6 +426,7 @@ finishButton.onclick = function () {
 reviewButton.onclick = function () {
   showResults.classList.add("hidden")
   reviewPageElement.classList.remove("hidden")
+  showReview.classList.remove("hidden")
 }
 
 const star1 = document.querySelector(".star1")
