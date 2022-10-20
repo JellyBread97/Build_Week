@@ -399,6 +399,10 @@ finishButton.onclick = function () {
         arc: {
           borderWidth: 0 // <-- Set this to derired value
         }
+      },
+      centerText: {
+        display: true,
+        text: "280"
       }
     }
   })
