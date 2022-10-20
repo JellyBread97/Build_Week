@@ -105,8 +105,6 @@ const questionNumberElement = document.getElementById("questionNumber")
 const answerButton = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-button")
 const finishButton = document.querySelector("#finish-button")
-<<<<<<< Updated upstream
-=======
 const scores = document.getElementById("scores")
 const scoreUpElement = document.getElementById("score-up")
 const scoreUp = parseInt(scoreUpElement.textContent, 0)
@@ -115,7 +113,6 @@ const percentageWrongElement = document.getElementById("wrong-percentage-score")
 const wrongScoreElement = document.getElementById("wrong-score")
 const reviewButton = document.getElementById("review-button")
 const reviewPageElement = document.querySelector(".review-page")
->>>>>>> Stashed changes
 
 let randomQuestion, currentQuestionIndex, selectedButton
 
@@ -348,6 +345,7 @@ function stopTimer() {}
 const showReview = document.querySelector(".review-page")
 const showResults = document.querySelector(".results-page")
 const timerElement = document.querySelector(".timer-container")
+const chartContainerElement = document.querySelector(".chart-container")
 
 // finishButton.addEventListener("click", finishBenchmark)
 // makes finish button appear
@@ -358,6 +356,7 @@ finishButton.onclick = function () {
   benchmarkPage.classList.add("hidden")
   showResults.classList.remove("hidden")
   reviewButton.classList.remove("hidden")
+  chartContainerElement.classList.remove("hidden")
 
   let finalPercentageCorrect =
     (parseInt(scoreUpElement.textContent, 0) / questions.length).toFixed(4) *
@@ -372,6 +371,25 @@ finishButton.onclick = function () {
   wrongScoreElement.innerHTML =
     wrongScore + " / " + questions.length + " questions "
 }
+
+// results chart
+let resultsChart = document.getElementById("scoreChart").getContext("2d")
+
+let finalResultsChart = new Chart(resultsChart, {
+  type: "doughnut",
+  data: {
+    // labels: ["wrong", "correct"],
+    datasets: [
+      {
+        label: "The summary of your answers",
+        data: [3, 4],
+        backgroundColor: [" #c2128d", "#41ffff"]
+      }
+    ]
+  },
+  options: {}
+})
+
 // let finishBenchmark = function () {
 // questionContainer.classList.add("hidden")
 // questionNumberElement.classList.add("hidden")
@@ -381,14 +399,11 @@ finishButton.onclick = function () {
 
 // functionality for review page
 
-<<<<<<< Updated upstream
-=======
 reviewButton.onclick = function () {
   showResults.classList.add("hidden")
   reviewPageElement.classList.remove("hidden")
 }
 
->>>>>>> Stashed changes
 const star1 = document.querySelector(".star1")
 const star2 = document.querySelector(".star2")
 const star3 = document.querySelector(".star3")
