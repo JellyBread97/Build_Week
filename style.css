@@ -312,6 +312,12 @@ input.check-box {
   font-size: 50px;
 }
 
+/* result page css*/
+.chart-container {
+  width: 50%;
+  height: 50%;
+}
+
 /* review page css*/
 
 .container {

@@ -365,30 +365,39 @@ finishButton.onclick = function () {
 
   let finalPercentageWrong = 100 - finalPercentageCorrect
   percentageWrongElement.innerHTML = finalPercentageWrong + "%"
-
+  let correctScore = parseInt(scoreUpElement.textContent, 0)
   let wrongScore = questions.length - parseInt(scoreUpElement.textContent, 0)
 
   wrongScoreElement.innerHTML =
     wrongScore + " / " + questions.length + " questions "
-}
 
-// results chart
-let resultsChart = document.getElementById("scoreChart").getContext("2d")
+  // results chart
+  let resultsChart = document.getElementById("scoreChart").getContext("2d")
 
-let finalResultsChart = new Chart(resultsChart, {
-  type: "doughnut",
-  data: {
-    // labels: ["wrong", "correct"],
-    datasets: [
-      {
-        label: "The summary of your answers",
-        data: [3, 4],
-        backgroundColor: [" #c2128d", "#41ffff"]
+  let finalResultsChart = new Chart(resultsChart, {
+    type: "doughnut",
+    data: {
+      // labels: ["wrong", "correct"],
+      datasets: [
+        {
+          label: "The summary of your answers",
+          data: [wrongScore, correctScore],
+          backgroundColor: [" #c2128d", "#41ffff"]
+        }
+      ]
+    },
+    options: {
+      cutoutPercentage: 70,
+      tooltips: { enabled: false },
+      hover: { mode: null },
+      elements: {
+        arc: {
+          borderWidth: 0 // <-- Set this to derired value
+        }
       }
-    ]
-  },
-  options: {}
-})
+    }
+  })
+}
 
 // let finishBenchmark = function () {
 // questionContainer.classList.add("hidden")
