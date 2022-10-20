@@ -165,22 +165,22 @@ input.check-box {
   margin: 0 auto;
   justify-content: center;
 }
-
+/* 
 .correct {
-  /* color: #e7e7eb;
+  color: #e7e7eb;
   background: linear-gradient(
     180deg,
     rgba(194, 18, 141, 0.6),
     rgba(127, 28, 225, 0.6)
-  ); */
-}
+  );
+} */
+
+/* .wrong {
+  color: #e7e7eb;
+} */
 
 .selected-answer {
   background-image: linear-gradient(#c2128d, #900080);
-}
-
-.wrong {
-  /* color: #e7e7eb; */
 }
 
 .hidden {
