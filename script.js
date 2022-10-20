@@ -94,29 +94,29 @@ const questions = [
       { text: "//", correct: false },
       { text: "=", correct: false },
       { text: ".", correct: false },
-      { text: "#", correct: true },
-    ],
-  },
-];
 
-const questionContainer = document.getElementById("benchmarkContainer");
-const questionElement = document.getElementById("question");
-const questionNumberElement = document.getElementById("questionNumber");
-const answerButton = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("next-button");
-const finishButton = document.querySelector("#finish-button");
-const scores = document.getElementById("scores");
-const scoreUpElement = document.getElementById("score-up");
-const scoreUp = parseInt(scoreUpElement.textContent, 0);
-const percentageDiv = document.getElementById("percentage-score");
-const percentageWrongElement = document.getElementById(
-  "wrong-percentage-score"
-);
-const wrongScoreElement = document.getElementById("wrong-score");
-const reviewButton = document.getElementById("review-button");
-const reviewPageElement = document.querySelector(".review-page");
+      { text: "#", correct: true }
+    ]
+  }
+]
 
-let randomQuestion, currentQuestionIndex, selectedButton;
+const questionContainer = document.getElementById("benchmarkContainer")
+const questionElement = document.getElementById("question")
+const questionNumberElement = document.getElementById("questionNumber")
+const answerButton = document.getElementById("answer-buttons")
+const nextButton = document.getElementById("next-button")
+const finishButton = document.querySelector("#finish-button")
+const scores = document.getElementById("scores")
+const scoreUpElement = document.getElementById("score-up")
+const scoreUp = parseInt(scoreUpElement.textContent, 0)
+const percentageDiv = document.getElementById("percentage-score")
+const percentageWrongElement = document.getElementById("wrong-percentage-score")
+const wrongScoreElement = document.getElementById("wrong-score")
+const reviewButton = document.getElementById("review-button")
+const reviewPageElement = document.querySelector(".review-page")
+
+let randomQuestion, currentQuestionIndex, selectedButton
+
 
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
@@ -345,38 +345,44 @@ function setCircleDasharray() {
 function stopTimer() {}
 
 // show review page
-const showReview = document.querySelector(".review-page");
-const showResults = document.querySelector(".results-page");
-const timerElement = document.querySelector(".timer-container");
-const chartContainerElement = document.querySelector(".chart-container");
+
+const showReview = document.querySelector(".review-page")
+const showResults = document.querySelector(".results-page")
+const timerElement = document.querySelector(".timer-container")
+const chartContainerElement = document.querySelector(".chart-container")
+
 
 // finishButton.addEventListener("click", finishBenchmark)
 // makes finish button appear
 // function to make results page show
 
 finishButton.onclick = function () {
-  console.log("finished");
-  benchmarkPage.classList.add("hidden");
-  showResults.classList.remove("hidden");
-  reviewButton.classList.remove("hidden");
-  chartContainerElement.classList.remove("hidden");
+
+  console.log("finished")
+  benchmarkPage.classList.add("hidden")
+  showResults.classList.remove("hidden")
+  reviewButton.classList.remove("hidden")
+  chartContainerElement.classList.remove("hidden")
+
 
   let finalPercentageCorrect =
     (parseInt(scoreUpElement.textContent, 0) / questions.length).toFixed(4) *
     100;
   percentageDiv.innerHTML = finalPercentageCorrect + "%";
 
-  let finalPercentageWrong = 100 - finalPercentageCorrect;
-  percentageWrongElement.innerHTML = finalPercentageWrong + "%";
-  let correctScore = parseInt(scoreUpElement.textContent, 0);
+
+  let finalPercentageWrong = 100 - finalPercentageCorrect
+  percentageWrongElement.innerHTML = finalPercentageWrong + "%"
+  let correctScore = parseInt(scoreUpElement.textContent, 0)
   let wrongScore =
-    questions.length - parseInt(scoreUpElement.textContent, 0).toFixed(4);
+    questions.length - parseInt(scoreUpElement.textContent, 0).toFixed(4)
 
   wrongScoreElement.innerHTML =
-    wrongScore + " / " + questions.length + " questions ";
+    wrongScore + " / " + questions.length + " questions "
 
   // results chart
-  let resultsChart = document.getElementById("scoreChart").getContext("2d");
+  let resultsChart = document.getElementById("scoreChart").getContext("2d")
+
 
   let finalResultsChart = new Chart(resultsChart, {
     type: "doughnut",
@@ -386,9 +392,11 @@ finishButton.onclick = function () {
         {
           label: "The summary of your answers",
           data: [wrongScore, correctScore],
-          backgroundColor: [" #c2128d", "#41ffff"],
-        },
-      ],
+
+          backgroundColor: [" #c2128d", "#41ffff"]
+        }
+      ]
+
     },
     options: {
       cutoutPercentage: 70,
@@ -396,12 +404,14 @@ finishButton.onclick = function () {
       hover: { mode: null },
       elements: {
         arc: {
-          borderWidth: 0, // <-- Set this to derired value
-        },
-      },
-    },
-  });
-};
+
+          borderWidth: 0 // <-- Set this to derired value
+        }
+      }
+    }
+  })
+}
+
 
 // let finishBenchmark = function () {
 // questionContainer.classList.add("hidden")
@@ -412,16 +422,23 @@ finishButton.onclick = function () {
 
 // functionality for review page
 
-const star1 = document.querySelector(".star1");
-const star2 = document.querySelector(".star2");
-const star3 = document.querySelector(".star3");
-const star4 = document.querySelector(".star4");
-const star5 = document.querySelector(".star5");
-const star6 = document.querySelector(".star6");
-const star7 = document.querySelector(".star7");
-const star8 = document.querySelector(".star8");
-const star9 = document.querySelector(".star9");
-const star10 = document.querySelector(".star10");
+
+reviewButton.onclick = function () {
+  showResults.classList.add("hidden")
+  reviewPageElement.classList.remove("hidden")
+}
+
+const star1 = document.querySelector(".star1")
+const star2 = document.querySelector(".star2")
+const star3 = document.querySelector(".star3")
+const star4 = document.querySelector(".star4")
+const star5 = document.querySelector(".star5")
+const star6 = document.querySelector(".star6")
+const star7 = document.querySelector(".star7")
+const star8 = document.querySelector(".star8")
+const star9 = document.querySelector(".star9")
+const star10 = document.querySelector(".star10")
+
 
 function stars1() {
   star1.style.color = "#41ffff";
