@@ -16,6 +16,7 @@ function hideWelcomePage() {
 }
 
 function proceed() {
+  scoreUpElement.textContent = 0
   let checkbox = document.getElementById("checkbox")
   let proceed = document.getElementById("button")
   proceed.addEventListener("click", function () {
@@ -116,7 +117,7 @@ const reviewButton = document.getElementById("review-button")
 const reviewPageElement = document.querySelector(".review-page")
 >>>>>>> Stashed changes
 
-let randomQuestion, currentQuestionIndex
+let randomQuestion, currentQuestionIndex, selectedButton
 
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++
@@ -127,6 +128,7 @@ nextButton.addEventListener("click", () => {
 function startBenchmark() {
   randomQuestion = questions.sort(() => Math.random() - 0.5)
   currentQuestionIndex = 0
+  scoreUpElement.textContent = 0 // score starts from zero
   setNextQuestion()
 }
 
@@ -159,18 +161,36 @@ function resetState() {
 
 function selectAnswer(e) {
   const selectedButton = e.target
+  const userAnswer = selectedButton.value
   const correct = selectedButton.dataset.correct
-  Array.from(answerButton.children).forEach((button) => {
+  processResults(correct)
+  // console.log(processResults(correct))
+  // console.log(selectedButton)
+  const answerOptions = answerButton.children
+  const answerOptionsArray = Array.from(answerOptions).forEach((button) => {
     // checks if the answer is correct or wrond
     setStatusClass(button, button.dataset.correct)
   })
   if (randomQuestion.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("hidden")
   } else {
+    const scoreUp = parseInt(scoreUpElement.textContent, 0)
     finishButton.classList.remove("hidden") // shows the finish button when we run out of questions
     nextButton.classList.add("hidden")
   }
+
+  console.log(answerOptionsArray)
 }
+
+function processResults(isCorrect) {
+  if (!isCorrect) {
+    return
+  }
+  const scoreUp = parseInt(scoreUpElement.textContent, 0)
+  scoreUpElement.textContent =
+    scoreUp + 1 + " / " + questions.length + " questions "
+}
+
 // changes colour based on whether answer is correct or wrong
 function setStatusClass(element, correct) {
   clearStatusClass(element)
@@ -196,6 +216,8 @@ function hideNextButton() {
 }
 
 startBenchmark()
+
+// calculate result
 
 // code for timer
 
@@ -255,6 +277,8 @@ startTimer()
 function onTimesUp() {
   clearInterval(timerInterval)
 }
+
+function nextQuestionTimerFinished() {}
 
 function startTimer() {
   timerInterval = setInterval(() => {
@@ -317,7 +341,7 @@ function setCircleDasharray() {
 // function timeIsUp() {
 //   if (timeLeft === alert.threshold)
 // }
-
+// onTimesUp()
 function stopTimer() {}
 
 // show review page
@@ -333,6 +357,20 @@ finishButton.onclick = function () {
   console.log("finished")
   benchmarkPage.classList.add("hidden")
   showResults.classList.remove("hidden")
+  reviewButton.classList.remove("hidden")
+
+  let finalPercentageCorrect =
+    (parseInt(scoreUpElement.textContent, 0) / questions.length).toFixed(4) *
+    100
+  percentageDiv.innerHTML = finalPercentageCorrect + "%"
+
+  let finalPercentageWrong = 100 - finalPercentageCorrect
+  percentageWrongElement.innerHTML = finalPercentageWrong + "%"
+
+  let wrongScore = questions.length - parseInt(scoreUpElement.textContent, 0)
+
+  wrongScoreElement.innerHTML =
+    wrongScore + " / " + questions.length + " questions "
 }
 // let finishBenchmark = function () {
 // questionContainer.classList.add("hidden")

@@ -307,6 +307,11 @@ input.check-box {
   width: 20%;
 }
 
+.results-page {
+  color: white;
+  font-size: 50px;
+}
+
 /* review page css*/
 
 .container {
