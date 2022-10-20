@@ -366,7 +366,8 @@ finishButton.onclick = function () {
   let finalPercentageWrong = 100 - finalPercentageCorrect
   percentageWrongElement.innerHTML = finalPercentageWrong + "%"
   let correctScore = parseInt(scoreUpElement.textContent, 0)
-  let wrongScore = questions.length - parseInt(scoreUpElement.textContent, 0)
+  let wrongScore =
+    questions.length - parseInt(scoreUpElement.textContent, 0).toFixed(4)
 
   wrongScoreElement.innerHTML =
     wrongScore + " / " + questions.length + " questions "

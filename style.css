@@ -313,6 +313,22 @@ input.check-box {
 }
 
 /* result page css*/
+
+#results {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  align-content: center;
+  text-align: center;
+  margin: 0;
+}
+
+#scorePageElements {
+  margin-top: 100px;
+  display: flex;
+  align-content: center;
+}
+
 .chart-container {
   width: 50%;
   height: 50%;

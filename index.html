@@ -85,8 +85,12 @@
   </div>
     <!-- html for results page -->
   <div class="results-page hidden">
-    <div id="results">results</div>
+    <div id="results">
+      <h1>Results</h1>
+      <p>The summary of your answers:</p>
+      <div>
     <div id="scores"></div>
+    <div id="scorePageElements">
     <div class="correct-scores">
       <div>Correct</div>
       <div id="percentage-score">0</div>
@@ -99,6 +103,7 @@
     <div>Wrong</div>
     <div id="wrong-percentage-score">0</div>
     <div id="wrong-score">0</div>  
+</div>
 </div>
 <button onclick="reviewBenchmark()" id="review-button" class="review-button btn hidden">
   Finish
