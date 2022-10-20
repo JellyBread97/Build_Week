@@ -165,7 +165,7 @@ input.check-box {
   margin: 0 auto;
   justify-content: center;
 }
-
+/* 
 .correct {
   color: #e7e7eb;
   background: linear-gradient(
@@ -173,10 +173,14 @@ input.check-box {
     rgba(194, 18, 141, 0.6),
     rgba(127, 28, 225, 0.6)
   );
-}
+} */
 
-.wrong {
+/* .wrong {
   color: #e7e7eb;
+} */
+
+.selected-answer {
+  background-image: linear-gradient(#c2128d, #900080);
 }
 
 .hidden {
@@ -357,17 +361,58 @@ input.check-box {
   align-content: center;
   text-align: center;
   margin: 0;
-}
-
-#scorePageElements {
-  margin-top: 100px;
-  display: flex;
-  align-content: center;
+  max-height: 100vh;
+  width: 100vw;
+  font-size: 20px;
 }
 
 .chart-container {
-  width: 50%;
-  height: 50%;
+  width: 700px;
+  height: 700px;
+}
+canvas {
+  height: 300px;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+}
+
+#results p {
+  margin: 0;
+}
+#scorePageElements {
+  display: flex;
+  padding: 0;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+}
+
+/* #scoreChart {
+} */
+
+#scorePageTextElements {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+  width: 80vw;
+}
+
+.chart-text {
+  font-size: 20px;
+  width: 200px;
+  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* review page css*/
