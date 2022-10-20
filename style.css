@@ -167,16 +167,20 @@ input.check-box {
 }
 
 .correct {
-  color: #e7e7eb;
+  /* color: #e7e7eb;
   background: linear-gradient(
     180deg,
     rgba(194, 18, 141, 0.6),
     rgba(127, 28, 225, 0.6)
-  );
+  ); */
+}
+
+.selected-answer {
+  background-image: linear-gradient(#c2128d, #900080);
 }
 
 .wrong {
-  color: #e7e7eb;
+  /* color: #e7e7eb; */
 }
 
 .hidden {
