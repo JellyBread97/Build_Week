@@ -105,8 +105,6 @@ const questionNumberElement = document.getElementById("questionNumber")
 const answerButton = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-button")
 const finishButton = document.querySelector("#finish-button")
-<<<<<<< Updated upstream
-=======
 const scores = document.getElementById("scores")
 const scoreUpElement = document.getElementById("score-up")
 const scoreUp = parseInt(scoreUpElement.textContent, 0)
@@ -115,7 +113,6 @@ const percentageWrongElement = document.getElementById("wrong-percentage-score")
 const wrongScoreElement = document.getElementById("wrong-score")
 const reviewButton = document.getElementById("review-button")
 const reviewPageElement = document.querySelector(".review-page")
->>>>>>> Stashed changes
 
 let randomQuestion, currentQuestionIndex, selectedButton
 
@@ -381,14 +378,11 @@ finishButton.onclick = function () {
 
 // functionality for review page
 
-<<<<<<< Updated upstream
-=======
 reviewButton.onclick = function () {
   showResults.classList.add("hidden")
   reviewPageElement.classList.remove("hidden")
 }
 
->>>>>>> Stashed changes
 const star1 = document.querySelector(".star1")
 const star2 = document.querySelector(".star2")
 const star3 = document.querySelector(".star3")
