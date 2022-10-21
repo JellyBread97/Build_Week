@@ -328,28 +328,24 @@ input.check-box {
 }
 /* result page */
 .results-page {
-  color: white;
-  font-size: 50px;
+  color: #e7e7eb;
+  margin: 0;
 }
 #review-button {
   position: absolute;
   font-family: "Inter", sans-serif;
   font-weight: bold;
-  background-color: #41ffff;
   text-align: center;
   font-size: 2.5vh;
-  padding: 2% 4%;
   bottom: 12%;
-  right: 38%;
-  border-color: #41ffff;
+  right: 44%;
+  width: 12vw;
+  height: 10vh;
+  background-color: unset;
+  border: 2px solid #e7e7eb;
   color: #e7e7eb;
-  background: #32028c;
-  box-shadow: 0 0 1vh #41ffff;
-  cursor: pointer;
+  transition: 0ms;
   border-radius: 0;
-  width: 24%;
-  opacity: 60%;
-  border-color: #e7e7eb;
 }
 
 /* result page css*/
@@ -363,9 +359,17 @@ input.check-box {
   margin: 0;
   max-height: 100vh;
   width: 100vw;
-  font-size: 20px;
 }
-
+#results h3 {
+  font-size: 7vh;
+  font-family: "Outfit", sans-serif;
+  margin-top: 15vh;
+  margin-bottom: 0;
+}
+#results p {
+  font-size: 3vh;
+  font-family: "Inter", sans-serif;
+}
 .chart-container {
   width: 700px;
   height: 700px;
@@ -397,17 +401,27 @@ canvas {
   top: 50%;
   left: 50%;
   position: fixed;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -55%);
   display: flex;
   flex-direction: row;
   align-content: center;
   text-align: center;
-  justify-content: center;
   justify-content: space-around;
   width: 80vw;
+  font-family: "Inter", sans-serif;
+  font-size: 3vh;
 }
-
+#congrats {
+  color: #e7e7eb;
+}
+#passed {
+  color: #41ffff;
+}
+#email-notif {
+  font-size: 2vh;
+}
 .chart-text {
+  position: absolute;
   font-size: 20px;
   width: 200px;
   margin: auto;
@@ -490,7 +504,6 @@ li a {
   font-size: 2vh;
 }
 hr {
-  display: block;
   height: 1px;
   border-top: 1px solid #c2128d;
 }
