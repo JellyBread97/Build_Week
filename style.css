@@ -23,7 +23,7 @@ html {
   left: 14%;
   color: #e7e7eb;
   font-family: "Outfit", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 10vh;
 }
 
@@ -50,7 +50,7 @@ html {
   position: absolute;
   top: 48%;
   left: 14%;
-  font-size: 1.8vh;
+  font-size: 2vh;
   font-family: "Inter", sans-serif;
   color: #e7e7eb;
   margin-right: 10vw;
@@ -60,14 +60,14 @@ html {
   position: absolute;
   top: 56%;
   left: 14%;
-  font-size: 1.8vh;
+  font-size: 2vh;
   font-family: "Inter", sans-serif;
   color: #e7e7eb;
   margin-right: 10vw;
 }
 
 span {
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .checkbox label {
@@ -77,6 +77,7 @@ span {
   bottom: 15%;
   font-size: 1.8vh;
   font-family: "Inter", sans-serif;
+  font-weight: 600;
   margin-right: 32vw;
   margin-left: 2vw;
 }
@@ -95,7 +96,7 @@ input.check-box {
 .proceed {
   position: absolute;
   font-family: "Inter", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   background-color: #41ffff;
   text-align: center;
   font-size: 2.5vh;
@@ -141,6 +142,7 @@ input.check-box {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   font-family: "Inter", sans-serif;
+  font-weight: 600;
   font-size: 16px;
   color: #e7e7eb;
   padding-bottom: 10px;
@@ -284,7 +286,7 @@ input.check-box {
 #finish-button {
   position: absolute;
   font-family: "Inter", sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   background-color: #51adc6;
   text-align: center;
   font-size: 3vh;
@@ -338,13 +340,13 @@ input.check-box {
 }
 #results h3 {
   font-size: 7vh;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 10vh;
   margin-bottom: 0;
 }
 .percentages {
   font-size: 7vh;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0;
   margin: 0;
 }
@@ -367,7 +369,7 @@ input.check-box {
 }
 
 #results p {
-  font-size: 3vh;
+  font-size: 4vh;
 }
 .chart-container {
   width: 700px;
@@ -449,7 +451,7 @@ canvas {
 
 #benchmark-failed {
   padding: 25px;
-  margin-top: 10px;
+  margin-top: 30px;
   font-weight: 600;
 }
 
