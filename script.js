@@ -103,6 +103,7 @@ const questions = [
 const questionContainer = document.getElementById("benchmarkContainer")
 const questionElement = document.getElementById("question")
 const questionNumberElement = document.getElementById("questionNumber")
+const totalQuestionNumberElement = document.getElementById("totalQuestions")
 const answerButton = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-button")
 const finishButton = document.querySelector("#finish-button")
@@ -178,7 +179,7 @@ function selectAnswer(e) {
     nextButton.classList.add("hidden")
   }
 
-  console.log(answerOptionsArray)
+  // console.log(answerOptionsArray)
 }
 
 function processResults(isCorrect) {
@@ -206,7 +207,8 @@ function processResults(isCorrect) {
 function changeQuestionNumber() {
   let numberOfQuestions = questions.length
   let currentQuestionNumber = currentQuestionIndex + 1
-  questionNumberElement.innerHTML = `Question ${currentQuestionNumber} / ${numberOfQuestions}`
+  questionNumberElement.innerHTML = `QUESTION ${currentQuestionNumber} `
+  totalQuestionNumberElement.innerHTML = numberOfQuestions
 }
 
 nextButton.addEventListener("click", hideNextButton)
