@@ -93,23 +93,27 @@
          <div id="scores"></div>
     <div id="scorePageTextElements">
     <div class="correct-scores">
-      <div id="correct-text">Correct</div>
-      <div id="percentage-score"></div>
-      <div id="score-up"></div> 
+      <div id="correct-text" class="score-label">Correct</div>
+      <div id="percentage-score" class="percentages"></div>
+      <div id="score-up" class="fraction-score"></div> 
     </div> 
       <div class="chart-text">
-        <span id="congrats">congratulations</span>
-        <span id="passed">you have passed</span>
-        <span id="email-notif">you will recieve an email soon with the credentials</span>
+        <span id="congrats"></span> 
+        <br>
+        <span id="passed"></span>
+        <br>
+        <span id="email-notif"></span>
       </div>
       <div class="wrong-scores">
-        <div id="wrong-text">Wrong</div>
-        <div id="wrong-percentage-score"></div>
-        <div id="wrong-score"></div>  
+        <div id="wrong-text" class="score-label">Wrong</div>
+        <div id="wrong-percentage-score" class="percentages"></div>
+        <div id="wrong-score" class="fraction-score"></div>  
     </div>
   </div>
+  <div id="chart-shadow"></div>
   <div class="chart-container">
-    <canvas width="50px"  id="scoreChart" class="hidden"></canvas>
+    <canvas width="50px"  id="scoreChart" class="hidden">
+    </canvas>
   </div>
 </div>
 </div>
