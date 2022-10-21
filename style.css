@@ -439,6 +439,7 @@ canvas {
   color: #e7e7eb;
   font-size: 2vh;
   font-weight: 600;
+  padding-top: 2vh;
 }
 #passed {
   color: #41ffff;
@@ -446,11 +447,11 @@ canvas {
   font-weight: 600;
 }
 #email-notif {
-  font-size: 1.7vh;
+  font-size: 1.2vh;
 }
 
 #benchmark-failed {
-  padding: 25px;
+  padding: 12vh;
   margin-top: 30px;
   font-weight: 600;
 }
@@ -459,7 +460,7 @@ canvas {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 1vh;
 }
 
 .chart-text {
@@ -516,7 +517,7 @@ ol {
   position: absolute;
   padding: 50px;
   transform: translate(0%, 130%);
-  margin-top: 150px;
+  margin-top: 22vh;
   margin-bottom: 200px;
 }
 ol li {
