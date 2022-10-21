@@ -349,6 +349,9 @@ const showReview = document.querySelector(".review-page")
 const showResults = document.querySelector(".results-page")
 const timerElement = document.querySelector(".timer-container")
 const chartContainerElement = document.querySelector(".chart-container")
+const passStatus = document.getElementById("congrats")
+const passStatusText = document.getElementById("passed")
+const passStatusParagraph = document.getElementById("email-notif")
 
 // finishButton.addEventListener("click", finishBenchmark)
 // makes finish button appear
@@ -374,6 +377,19 @@ finishButton.onclick = function () {
 
   wrongScoreElement.innerHTML =
     wrongScore + " / " + questions.length + " questions "
+
+  //chart inner text
+  if (finalPercentageCorrect > finalPercentageWrong) {
+    passStatus.innerText = "Congratulations!"
+    passStatusText.innerText = " You passed the exam."
+    passStatusParagraph.innerText =
+      "We'll send you the certificate in a few minutes. Check your email (including promotions / spam folder)"
+  } else {
+    passStatus.innerText = "Fail"
+    passStatusText.innerText = " You failed the exam"
+    passStatusParagraph.innerText =
+      "We'll be in touch regarding your individual re-take"
+  }
 
   // results chart
   let resultsChart = document.getElementById("scoreChart").getContext("2d")
