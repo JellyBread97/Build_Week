@@ -249,13 +249,19 @@ input.check-box {
   color: white;
 }
 
-#questionNumber {
+#questionNumberProgress {
   position: absolute;
   font-family: "Outfit", sans-serif;
   color: #e7e7eb;
-  bottom: 3%;
+  bottom: 5%;
   right: 45%;
   font-size: 3vh;
+  display: flex;
+}
+
+.pink {
+  color: #c2128d;
+  margin-left: 5px;
 }
 #next-button {
   position: absolute;
