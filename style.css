@@ -381,9 +381,14 @@ input.check-box {
 }
 
 .fraction-score {
-  font-size: 2vh;
+  font-size: 2.5vh;
   padding: 0;
   margin: 0;
+}
+
+#email-notif {
+  font-weight: 500;
+  font-size: 1vh;
 }
 
 #results p {
