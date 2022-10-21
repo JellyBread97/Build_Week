@@ -13,7 +13,7 @@ html {
 
 .logo {
   position: absolute;
-  top: 7%;
+  top: 2%;
   left: 14%;
 }
 
@@ -483,7 +483,7 @@ canvas {
   position: absolute;
   align-items: center;
   justify-content: center;
-  top: 30%;
+  top: 15%;
   width: 100%;
   transition: 0.3s;
 }
@@ -496,15 +496,17 @@ canvas {
 #p-review {
   position: absolute;
   top: 2vh;
-  font-family: "Inter", sans-serif;
-  font-size: 2.5vh;
   text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 4vh;
 }
 #p-bottom-one {
   position: absolute;
   font-family: "Inter", sans-serif;
   top: 20vh;
-  font-size: 3vh;
+  font-size: 4vh;
+  margin-top: 100px;
 }
 ol {
   display: flex;
@@ -512,12 +514,14 @@ ol {
   position: absolute;
   padding: 50px;
   transform: translate(0%, 130%);
+  margin-top: 150px;
+  margin-bottom: 200px;
 }
 ol li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 li a {
-  font-size: 25px;
+  font-size: 6vh;
   color: #561e6e;
 }
 .review-page {
@@ -550,15 +554,19 @@ li a {
   background: transparent;
   border: transparent;
   font-size: 2vh;
-  color: #e7e7eb;
+  font-family: "Inter", sans-serif;
+  color: grey;
   width: 68vw;
+  margin-top: 90px;
 }
 hr {
   display: block;
   position: relative;
-  top: 60vh;
+  top: 55vh;
   height: 60px;
   border: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
   margin-left: 14vw;
   margin-right: 14vw;
   border-bottom: 2px solid #c2128d;
