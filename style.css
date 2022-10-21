@@ -435,12 +435,16 @@ canvas {
 
 #congrats {
   color: #e7e7eb;
+  font-size: 2vh;
+  font-weight: 600;
 }
 #passed {
   color: #41ffff;
+  font-size: 2vh;
+  font-weight: 600;
 }
 #email-notif {
-  font-size: 2vh;
+  font-size: 1.7vh;
 }
 
 #benchmark-failed {
@@ -448,6 +452,14 @@ canvas {
   margin-top: 10px;
   font-weight: 600;
 }
+
+.chartTextWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
 .chart-text {
   position: absolute;
   font-size: 20px;
