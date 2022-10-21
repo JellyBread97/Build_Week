@@ -464,6 +464,7 @@ ol {
   list-style: none;
   position: absolute;
   padding: 50px;
+  transform: translate(0%, 130%);
 }
 ol li {
   margin: 0 15px;
@@ -502,8 +503,16 @@ li a {
   background: transparent;
   border: transparent;
   font-size: 2vh;
+  color: #e7e7eb;
+  width: 68vw;
 }
 hr {
-  height: 1px;
-  border-top: 1px solid #c2128d;
+  display: block;
+  position: relative;
+  top: 60vh;
+  height: 60px;
+  border: 0;
+  margin-left: 14vw;
+  margin-right: 14vw;
+  border-bottom: 2px solid #c2128d;
 }
