@@ -365,16 +365,14 @@ finishButton.onclick = function () {
   chartContainerElement.classList.remove("hidden")
 
   let finalPercentageCorrect =
-    (parseInt(scoreUpElement.textContent, 0) / questions.length).toFixed(4) *
-    100
-  percentageDiv.innerHTML = finalPercentageCorrect + "%"
+    (parseInt(scoreUpElement.textContent, 0) / questions.length) * 100
+  percentageDiv.innerHTML = finalPercentageCorrect.toFixed(1) + "%"
 
-  let finalPercentageWrong = 100 - finalPercentageCorrect.toFixed(4)
-  percentageWrongElement.innerHTML = finalPercentageWrong.toFixed(2) + "%"
+  let finalPercentageWrong = 100 - finalPercentageCorrect
+  percentageWrongElement.innerHTML = finalPercentageWrong.toFixed(1) + "%"
   let correctScore = parseInt(scoreUpElement.textContent, 0)
   scoreUp.innerHTML = correctScore + " / " + questions.length + " questions "
-  let wrongScore =
-    questions.length - parseInt(scoreUpElement.textContent, 0).toFixed(4)
+  let wrongScore = questions.length - correctScore
 
   wrongScoreElement.innerHTML =
     wrongScore + " / " + questions.length + " questions "
