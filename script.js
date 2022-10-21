@@ -66,9 +66,9 @@ const questions = [
   {
     question: "What is the correct HTML element for inserting a line break?",
     answers: [
-      { text: "<br>", correct: false },
+      { text: "<br>", correct: true },
       { text: "<lb>", correct: false },
-      { text: "<break>", correct: true },
+      { text: "<break>", correct: false },
       { text: "<div>", correct: false }
     ]
   },
@@ -365,15 +365,14 @@ finishButton.onclick = function () {
   chartContainerElement.classList.remove("hidden")
 
   let finalPercentageCorrect =
-    (parseInt(scoreUpElement.textContent, 0) / questions.length).toFixed(4) *
-    100
-  percentageDiv.innerHTML = finalPercentageCorrect + "%"
+    (parseInt(scoreUpElement.textContent, 0) / questions.length) * 100
+  percentageDiv.innerHTML = finalPercentageCorrect.toFixed(1) + "%"
 
-  let finalPercentageWrong = 100 - finalPercentageCorrect.toFixed(4)
-  percentageWrongElement.innerHTML = finalPercentageWrong + "%"
+  let finalPercentageWrong = 100 - finalPercentageCorrect
+  percentageWrongElement.innerHTML = finalPercentageWrong.toFixed(1) + "%"
   let correctScore = parseInt(scoreUpElement.textContent, 0)
-  let wrongScore =
-    questions.length - parseInt(scoreUpElement.textContent, 0).toFixed(4)
+  scoreUp.innerHTML = correctScore + " / " + questions.length + " questions "
+  let wrongScore = questions.length - correctScore
 
   wrongScoreElement.innerHTML =
     wrongScore + " / " + questions.length + " questions "
@@ -385,7 +384,7 @@ finishButton.onclick = function () {
     passStatusParagraph.innerText =
       "We'll send you the certificate in a few minutes. Check your email (including promotions / spam folder)"
   } else {
-    passStatus.innerText = "Fail"
+    passStatus.innerText = "Fail!"
     passStatusText.innerText = " You failed the exam"
     passStatusParagraph.innerText =
       "We'll be in touch regarding your individual re-take"
