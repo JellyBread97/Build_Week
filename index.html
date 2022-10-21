@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@200;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.mjs" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> -->
+    <title>Epicode Quiz</title>
+  </head>
+
+  <body>
+    <div class="bg">
+    
+    <div class="logo">
+      <img src="./assets/epicode_logo.png" width="14%" />
+    </div>
+    
+    <div class="welcome-page" class="hidden">
+    <div>
+      <h1 class="heading1">Welcome to</h1>
+    </div>
+
+    <div>
+      <h2 class="heading2">your exam</h2>
+    </div>
+
+    <div class="instructions">
+      <h3>Instructions</h3>
+      <p>
+        We don't expect most engineers to know the answers to all of these<br />questions,
+        so don't worry if you're unsure of a few of them.
+        
+      </p>
+      <ul>
+        <li>
+          Each question is <span>timed</span> and can be
+          <span>answered once</span>.
+        </li>
+      </br>
+        <li>
+          Changing browser tab or opening other windows will
+          <span>invalidate the question</span>.
+        </li>
+      </br>
+        <li>This exam will take approx. <span>0-5 minutes</span>.</li>
+      </ul>
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="checkbox" class="check-box" />
+      <label for="checkbox"
+        >I promise to answer myself without help from anyone</label
+      >
+    </div>
+    <div class="button">
+      <input type="button" value="PROCEED" id="button" class="proceed" />
+    </div>
+  </div>
+
+    <div class="benchmark-page">
+    <!--html for benchmark quiz-->
+    <div class="mainContainer">
+      <div class="header"></div>
+      </div>
+      <div class="timer-container">
+            <div id="timer"></div>
+          </div>
+      <div id="benchmarkContainer">
+        <div id="question">Insert Question Here</div>
+        <div id="answer-buttons" class="btn-grid"></div>
+      </div>
+      <div class="benchmarkNavigation">
+        <button id="next-button" class="next-button btn hidden">Next</button>
+        <button onclick="finishBenchmark()" id="finish-button" class="next-button btn hidden">
+          Finish
+        </button>
+      </div>
+      <div id="questionNumberProgress">
+        <div id="questionNumber"></div>
+        <div class="pink">/</div>
+        <div id="totalQuestions" class="pink"></div>
+    </div>
+    </div>
+     <!-- html for results page -->
+  <div class="results-page hidden">
+    <div id="results">
+      <h3>Results</h3>
+      <p>The summary of your answers:</p>
+      <!-- <p id="check-answers"> Check your answers</p> -->
+      <div>
+         <div id="scores"></div>
+    <div id="scorePageTextElements">
+    <div class="correct-scores">
+      <div id="correct-text" class="score-label">Correct</div>
+      <div id="percentage-score" class="percentages"></div>
+      <div id="score-up" class="fraction-score"></div> 
+    </div> 
+      <div class="chart-text">
+        <div class="chartTextWrapper ">
+        <div id="congrats"></div> 
+              <div id="passed"></div>
+              </div>
+              <div id="email-notif"></div>
+      </div>
+      <div class="wrong-scores">
+        <div id="wrong-text" class="score-label">Wrong</div>
+        <div id="wrong-percentage-score" class="percentages"></div>
+        <div id="wrong-score" class="fraction-score"></div>  
+    </div>
+  </div>
+  <div id="chart-shadow"></div>
+  <div class="chart-container">
+    <canvas width="50px"  id="scoreChart" class="hidden">
+    </canvas>
+  </div>
+  <div id="benchmark-failed"></div>
+</div>
+</div>
+<button onclick="reviewBenchmark()" id="review-button" class="review-button btn hidden">
+  RATE US
+</button>
+</div>
+<div class="review-page hidden">
+<div class="container">
+  <h2 id="h2-review">Tell us how it's going</h1>
+  <p id="p-review">From 0 to 10, how likely are you to recommend EPICODE<br> to a friend or a colleague?</p>
+  <p id="p-bottom-one">Leave us an open feedback about your experience so far</p>
+  <ol>
+      <li><a href="#" class="star1" onClick="stars1();"><span class="fas fa-star"></span></a></li>
+      <li><a href="#" class="star2" onClick="stars2();"><span class="fas fa-star"></span></a></li>
+      <li><a href="#" class="star3" onClick="stars3();"><span class="fas fa-star"></span></a></li>
+      <li><a href="#" class="star4" onClick="stars4();"><span class="fas fa-star"></span></a></li>
+      <li><a href="#" class="star5" onClick="stars5();"><span class="fas fa-star"></span></a></li>
+      <li><a href="#" class="star6" onClick="stars6();"><span class="fas fa-star"></span></a></li>
+      <li><a href="#" class="star7" onClick="stars7();"><span class="fas fa-star"></span></a></li>
+      <li><a href="#" class="star8" onClick="stars8();"><span class="fas fa-star"></span></a></li>
+      <li><a href="#" class="star9" onClick="stars9();"><span class="fas fa-star"></span></a></li>
+      <li><a href="#" class="star10" onClick="stars10();"><span class="fas fa-star"></span></a></li>
+  </ol>
+  <textarea id="textarea" rows="1" cols="50">Write your comment here</textarea>
+</div>
+<hr>
+<div>
+<button type="button" id="myBtn">MORE INFO</button>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script type="text/javascript" src="script.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
