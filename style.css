@@ -483,7 +483,7 @@ canvas {
   position: absolute;
   align-items: center;
   justify-content: center;
-  top: 15%;
+  top: 25%;
   width: 100vw;
   transition: 0.3s;
 }
@@ -495,7 +495,7 @@ canvas {
 }
 #p-review {
   position: absolute;
-  top: 2vh;
+  top: 3vh;
   text-align: center;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
@@ -503,6 +503,7 @@ canvas {
 }
 #p-bottom-one {
   position: absolute;
+  top: 5vh;
   font-family: "Inter", sans-serif;
   top: 20vh;
   font-size: 4vh;
@@ -538,7 +539,7 @@ li a {
   text-align: center;
   font-size: 2.5vh;
   padding: 2% 4%;
-  bottom: 20%;
+  bottom: 10%;
   left: 42%;
   border-color: #41ffff;
   color: #0b113b;
@@ -565,7 +566,7 @@ hr {
   cursor: pointer;
   display: block;
   position: relative;
-  top: 55vh;
+  top: 65vh;
   height: 60px;
   border: 0;
   margin-top: 10px;
