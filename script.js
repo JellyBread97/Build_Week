@@ -66,9 +66,9 @@ const questions = [
   {
     question: "What is the correct HTML element for inserting a line break?",
     answers: [
-      { text: "<br>", correct: false },
+      { text: "<br>", correct: true },
       { text: "<lb>", correct: false },
-      { text: "<break>", correct: true },
+      { text: "<break>", correct: false },
       { text: "<div>", correct: false }
     ]
   },
@@ -370,7 +370,7 @@ finishButton.onclick = function () {
   percentageDiv.innerHTML = finalPercentageCorrect + "%"
 
   let finalPercentageWrong = 100 - finalPercentageCorrect.toFixed(4)
-  percentageWrongElement.innerHTML = finalPercentageWrong + "%"
+  percentageWrongElement.innerHTML = finalPercentageWrong.toFixed(2) + "%"
   let correctScore = parseInt(scoreUpElement.textContent, 0)
   scoreUp.innerHTML = correctScore + " / " + questions.length + " questions "
   let wrongScore =
@@ -386,7 +386,7 @@ finishButton.onclick = function () {
     passStatusParagraph.innerText =
       "We'll send you the certificate in a few minutes. Check your email (including promotions / spam folder)"
   } else {
-    passStatus.innerText = "Fail"
+    passStatus.innerText = "Fail!"
     passStatusText.innerText = " You failed the exam"
     passStatusParagraph.innerText =
       "We'll be in touch regarding your individual re-take"
