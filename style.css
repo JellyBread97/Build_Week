@@ -484,7 +484,7 @@ canvas {
   align-items: center;
   justify-content: center;
   top: 15%;
-  width: 100%;
+  width: 100vw;
   transition: 0.3s;
 }
 #h2-review {
@@ -526,6 +526,8 @@ li a {
 }
 .review-page {
   color: white;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 #myBtn {
@@ -560,13 +562,14 @@ li a {
   margin-top: 90px;
 }
 hr {
+  cursor: pointer;
   display: block;
   position: relative;
   top: 55vh;
   height: 60px;
   border: 0;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 10px;
+  margin-bottom: 0px;
   margin-left: 14vw;
   margin-right: 14vw;
   border-bottom: 2px solid #c2128d;
