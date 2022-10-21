@@ -363,15 +363,27 @@ input.check-box {
 }
 #results h3 {
   font-size: 7vh;
+  font-weight: 600;
   margin-top: 10vh;
   margin-bottom: 0;
 }
 .percentages {
   font-size: 7vh;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
 }
 
 .score-label {
   font-size: 7vh;
+  padding: 0;
+  margin: 0;
+}
+
+.fraction-score {
+  font-size: 2vh;
+  padding: 0;
+  margin: 0;
 }
 
 #results p {
@@ -433,11 +445,14 @@ canvas {
 
 .correct-scores {
   text-align: left;
+  margin-right: 200px;
 }
 
 .wrong-scores {
   text-align: right;
+  margin-left: 200px;
 }
+
 #congrats {
   color: #e7e7eb;
 }
